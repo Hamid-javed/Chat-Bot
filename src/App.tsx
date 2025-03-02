@@ -119,7 +119,7 @@ function App() {
             <div className="flex flex-col items-center justify-center h-[calc(100vh-180px)] text-center p-8">
               <Bot className="w-12 h-12 text-blue-500 mb-4" />
               <h2 className="text-2xl font-semibold mb-2">
-                Welcome to 1.5 Pro Chat
+                Welcome to ChatBot 1.5 Pro
               </h2>
               <p className="text-gray-600">
                 Start a conversation by typing a message below.
