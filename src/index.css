@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.prose pre {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.prose code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  color: #e5e7eb !important; /* Ensure code text is always light */
+}
+
+.prose pre code {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  white-space: pre;
+  word-break: normal;
+  word-spacing: normal;
+  tab-size: 2;
+}
+
+/* Override any Tailwind prose text colors for code blocks */
+.prose pre, .prose code {
+  padding: 10;
+  color: #e5e7eb !important;
+}
+
+/* Ensure background color for code blocks */
+.prose pre {
+  padding: 2%;
+  background-color: #111827 !important;
+  border-radius: 0.5rem;
+}
