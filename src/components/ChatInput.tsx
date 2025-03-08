@@ -1,5 +1,5 @@
-import React, { useState, FormEvent } from 'react';
-import { Send } from 'lucide-react';
+import React, { useState, FormEvent } from "react";
+import { Send } from "lucide-react";
 
 interface ChatInputProps {
   onSend: (message: string) => void;
@@ -7,13 +7,13 @@ interface ChatInputProps {
 }
 
 export function ChatInput({ onSend, disabled }: ChatInputProps) {
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (input.trim() && !disabled) {
       onSend(input);
-      setInput('');
+      setInput("");
     }
   };
 
