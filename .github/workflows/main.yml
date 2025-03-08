@@ -3,7 +3,7 @@ name: Deploy to AWS EC2
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
@@ -17,7 +17,7 @@ jobs:
         run: npm install
 
       - name: Build Project
-        run: npm run build  # Vite builds to `dist/` by default
+        run: npm run build # Vite builds to `dist/` by default
 
       - name: Deploy to AWS EC2
         uses: appleboy/scp-action@master
@@ -25,8 +25,8 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: "dist/*"  # Deploy Vite's build output
-          target: "/var/www/html"  # The root folder for NGINX
+          source: "dist/*" # Deploy Vite's build output
+          target: "/var/www/html" # The root folder for NGINX
 
       - name: Restart NGINX on EC2
         uses: appleboy/ssh-action@master
