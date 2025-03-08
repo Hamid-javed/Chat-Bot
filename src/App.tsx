@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Bot, Sparkles, Github, Linkedin, UserCircle } from "lucide-react";
 import { ChatMessage } from "./components/ChatMessage";
 import { ChatInput } from "./components/ChatInput";
